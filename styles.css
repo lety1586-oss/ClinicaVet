@@ -1,0 +1,229 @@
+:root {
+    --primary-color: #2a9d8f;
+    --secondary-color: #264653;
+    --background-color: #f4f6f9;
+    --card-background: #ffffff;
+    --text-color: #333333;
+    --accent-color: #e76f51;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: var(--secondary-color);
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+header p {
+    margin: 0.5rem 0 0 0;
+    opacity: 0.8;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    background: var(--card-background);
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    border-top: 5px solid var(--primary-color);
+}
+
+h2 {
+    color: var(--secondary-color);
+    margin-top: 0;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 0.5rem;
+}
+
+h3 {
+    color: var(--primary-color);
+    margin-top: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1.2rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="time"],
+select,
+textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px rgba(42, 157, 143, 0.3);
+}
+
+.btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #21867a;
+}
+
+.lista {
+    list-style: none;
+    padding: 0;
+}
+
+.lista li {
+    background: #f8f9fa;
+    padding: 0.8rem;
+    border-left: 4px solid var(--accent-color);
+    margin-bottom: 0.5rem;
+    border-radius: 0 5px 5px 0;
+    font-size: 0.95rem;
+}
+
+.historial-item {
+    background: #f8f9fa;
+    padding: 1rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    border-left: 4px solid var(--secondary-color);
+}
+
+.historial-item small {
+    color: #777;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+/* --- ESTILOS DEL PIE DE PÁGINA (BANNER DE INFORMACIÓN) --- */
+footer {
+    background-color: var(--secondary-color);
+    color: #ffffff;
+    margin-top: 3rem;
+    padding: 2.5rem 0 1rem 0;
+    border-top: 4px solid var(--primary-color);
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: block; /* Estructura base */
+}
+
+/* Formato de columnas automáticas sin usar flex/grid complejos en body */
+.footer-info {
+    display: inline-block;
+    vertical-align: top;
+    width: 30%;
+    margin-right: 3%;
+    margin-bottom: 1.5rem;
+    box-sizing: border-box;
+}
+
+.footer-info:last-child {
+    margin-right: 0;
+}
+
+.footer-info h3 {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.footer-info p {
+    margin: 0.5rem 0;
+    font-size: 0.95rem;
+    opacity: 0.9;
+    line-height: 1.4;
+}
+
+/* Botón interactivo de WhatsApp */
+.btn-whatsapp {
+    display: inline-block;
+    background-color: #25D366; /* Verde oficial de WhatsApp */
+    color: white;
+    text-decoration: none;
+    padding: 0.8rem 1.2rem;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 0.95rem;
+    margin-top: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.btn-whatsapp:hover {
+    background-color: #1ebd57;
+    transform: translateY(-2px);
+}
+
+.ws-icon {
+    margin-right: 5px;
+    font-size: 1.1rem;
+}
+
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 2rem;
+    padding-top: 1rem;
+    font-size: 0.85rem;
+    opacity: 0.7;
+}
+
+/* Ajuste responsivo para pantallas móviles */
+@media (max-width: 768px) {
+    .footer-info {
+        display: block;
+        width: 100%;
+        margin-right: 0;
+        text-align: center;
+    }
+    .btn-whatsapp {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}

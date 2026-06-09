@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vet Fabi - Gestión Veterinaria</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>🐾 Vet Fabi - Panel de Control</h1>
+        <p>Sistema de Gestión de Pacientes y Citas</p>
+    </header>
+
+    <main class="container">
+        <section class="card">
+            <h2>🐶 Registrar Mascota</h2>
+            <form id="form-mascota">
+                <div class="form-group">
+                    <label for="nombre-mascota">Nombre de la Mascota:</label>
+                    <input type="text" id="nombre-mascota" required placeholder="Ej. Toby">
+                </div>
+                <div class="form-group">
+                    <label for="especie">Especie:</label>
+                    <input type="text" id="especie" required placeholder="Ej. Perro, Gato">
+                </div>
+                <div class="form-group">
+                    <label for="edad">Edad:</label>
+                    <input type="text" id="edad" required placeholder="Ej. 3 años">
+                </div>
+                <button type="submit" class="btn">Guardar Mascota</button>
+            </form>
+            
+            <h3>Mascotas Registradas</h3>
+            <ul id="lista-mascotas" class="lista"></ul>
+        </section>
+
+        <section class="card">
+            <h2>📅 Agendar Citas</h2>
+            <form id="form-citas">
+                <div class="form-group">
+                    <label for="seleccionar-mascota-cita">Seleccionar Mascota:</label>
+                    <select id="seleccionar-mascota-cita" required>
+                        <option value="">-- Selecciona una mascota --</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="fecha-cita">Fecha de la Cita (Calendario):</label>
+                    <input type="date" id="fecha-cita" required>
+                </div>
+                <div class="form-group">
+                    <label for="hora-cita">Hora:</label>
+                    <input type="time" id="hora-cita" required>
+                </div>
+                <button type="submit" class="btn">Guardar Cita</button>
+            </form>
+
+            <h3>🗓️ Citas Programadas</h3>
+            <ul id="lista-citas" class="lista"></ul>
+        </section>
+
+        <section class="card">
+            <h2>📋 Historial Médico</h2>
+            <form id="form-historial">
+                <div class="form-group">
+                    <label for="seleccionar-mascota-historial">Seleccionar Mascota:</label>
+                    <select id="seleccionar-mascota-historial" required>
+                        <option value="">-- Selecciona una mascota --</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="diagnostico">Detalles / Diagnóstico:</label>
+                    <textarea id="diagnostico" rows="4" required placeholder="Ej. Vacunación quíntuple aplicada, buen estado general..."></textarea>
+                </div>
+                <button type="submit" class="btn">Registrar Historial</button>
+            </form>
+
+            <h3>Historiales Guardados</h3>
+            <div id="cronologia-historial"></div>
+        </section>
+    </main>
+    
+    <script src="app.js"></script>
+
+
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-info">
+                <h3>📍 Ubicación y Dirección</h3>
+                <p>Av. Principal #123, Urb. Los Jardines</p>
+                <p>Ciudad Veterinaria, CP 12345</p>
+            </div>
+            
+            <div class="footer-info">
+                <h3>📞 Contacto</h3>
+                <p><strong>Teléfono:</strong> +51 1 234 5678</p>
+                <p><strong>Correo:</strong> contacto@vetfabi.com</p>
+            </div>
+            
+            <div class="footer-info footer-whatsapp">
+                <h3>💬 Atención Inmediata</h3>
+                <a href="https://wa.me/51999999999?text=Hola%20Vet%20Fabi,%20deseo%20realizar%20una%20consulta" target="_blank" class="btn-whatsapp">
+                    <span class="ws-icon">▶</span> Chatear por WhatsApp
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Vet Fabi. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
+
+
+</body>
+</html>
